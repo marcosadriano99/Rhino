@@ -24,3 +24,7 @@ java -jar js.jar
 ~~~~
 
 <p>Agora você criou um arquivo em lotes e pode iniciar o <b>Rhino</b>.
+
+<h2>Sintaxe básica</h2>
+
+<h3>Variáveis e constantes - inicialização e comandos de atribuição</h3>
