@@ -29,6 +29,8 @@ java -jar js.jar
 
 <h3>Variáveis e constantes - inicialização e comandos de atribuição</h3>
 
+<p>Para atribuir valores a variáveis, é utilizado o comando <i>var</i>, da mesma forma que no JavaScript.</p>
+
 <h3>Operadores relacionais e lógicos</h3>
 
 <h3>Operadores aritméticos</h3>
