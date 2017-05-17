@@ -29,7 +29,7 @@ java -jar js.jar
 
 <h3>Variáveis e constantes - inicialização e comandos de atribuição</h3>
 
-<p>Para atribuir valores a variáveis, é utilizado o comando <i>var</i>, da mesma forma que no JavaScript. Já para escrever na tela, é usado o comando <i>print</i>.</p>
+<p>Para declarar variáveis, é utilizado o comando <i>var</i>, e, para atribuir, o <i>=</i>, da mesma forma que no JavaScript. Já para escrever na tela, usa-se o <i>print</i>.</p>
 
 ~~~~
 var x = "hello, world"
