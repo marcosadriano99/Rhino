@@ -67,7 +67,51 @@ hello, world
 
 <h3>Estruturas de controle condicional</h3>
 
+É usado o <i>if</i> e <i>else</i>.
+
+~~~~
+var x = "hello world";
+
+if (x === "hello, world") print ("true");
+else print ("false");
+~~~~
+
 <h3>Estruturas de repetição</h3>
+
+<h5>While</h5>
+
+~~~~
+var x = 0;
+
+while (x <= 5){x++; print("teste")}
+teste
+teste
+teste
+teste
+teste
+teste
+~~~~
+
+<h5>Do while</h5>
+
+~~~~
+var x = 0;
+
+do{print(x); x++;} while(x <= 5);
+0
+1
+2
+3
+4
+5
+5
+~~~~
+
+<h5>For</h5>
+
+~~~~
+
+~~~~
 
 <h3>Vetores, matrizes e strings</h3>
 
