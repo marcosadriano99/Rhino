@@ -29,7 +29,7 @@ java -jar js.jar
 
 <h3>Variáveis e constantes - inicialização e comandos de atribuição</h3>
 
-<p>Para declarar variáveis, é utilizado o comando <i>var</i>, e, para atribuir, o <i>=</i>, da mesma forma que no JavaScript. Já para escrever na tela, usa-se o <i>print</i>.</p>
+<p>Para declarar variáveis, é utilizado o comando <i>var</i>, e, para atribuir, o símbolo de <i>=</i>, da mesma forma que no JavaScript.</p>
 
 ~~~~
 var x = "hello, world"
@@ -40,17 +40,30 @@ hello, world
 
 <h3>Operadores relacionais e lógicos</h3>
 
-| First Header  | Second Header |
+| Operador  | Descrição |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| ==  | Igual a  |
+| <> ou !=  | Diferente de  |
+| ===  | Idêntico  |
+| !==  | Diferente  |
+| > | Maior que  |
+| < | Menor que  |
+| >=  | Maior ou igual  |
+| <=  | Menor ou igual  |
+| &&  | E  |
+| ||  | Ou  |
 
 <h3>Operadores aritméticos</h3>
 
-| First Header  | Second Header |
+| Operadores  | Descrição |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| + | Adição  |
+| - | Subtração  |
+| *  | Multiplicação  |
+| /  | Divisão  |
+| %  | Módulo |
+| ++  | Incremento  |
+| --  | Decremento  |
 
 <h3>Estruturas de controle condicional</h3>
 
