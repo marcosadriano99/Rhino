@@ -131,8 +131,6 @@ email dois
 email tres
 ~~~~
 
-<h3>Funções</h3>
-
 <h2>Sintaxe OO</h2>
 
 <h3>Criando classes e objetos</h3>
@@ -300,6 +298,8 @@ isso, basta chamar a função Pessoa utilizando a nossa instância (this)
 como referência.
 
 Essa técnica é chamada de Constructor Stealing :
+
+~~~~
 var PessoaFisica = function(nome, email, cpf){
     Pessoa.call(this, nome, email);
     this.cpf = cpf;
@@ -308,12 +308,9 @@ var PessoaFisica = function(nome, email, cpf){
 PessoaFisica.prototype.dizCpf = function(){
     console.log(this.cpf);
 };
+~~~~
 
 Isso fará com que nossa PessoaFisica tenha todos os atributos que uma pessoa.</p>
-
-<h3>Polimorfismo</h3>
-
-<h3>Sobrecarga</h3>
 
 <h3>Categorias de exeções</h3>
 
