@@ -315,36 +315,28 @@ Isso fará com que nossa PessoaFisica tenha todos os atributos que uma pessoa.</
 <h3>Categorias de exeções</h3>
 
 <p>
-EvalError
-    Creates an instance representing an error that occurs regarding the 
+EvalError Cria uma instância que representa um erro que ocorre em relação ao
 
-global function eval().
-InternalError
-    Creates an instance representing an error that occurs when an 
+Função global eval (). </p>
+<p>InternalError Cria uma instância que representa um erro que ocorre quando um
 
-internal error in the JavaScript engine is thrown. E.g. "too much 
+Erro interno no mecanismo JavaScript é lançado. Por exemplo. "demais
 
-recursion".
-RangeError
-    Creates an instance representing an error that occurs when a numeric 
+Recursão "RangeError Cria uma instância que representa um erro que ocorre quando um valor numérico
 
-variable or parameter is outside of its valid range.
-ReferenceError
-    Creates an instance representing an error that occurs when de-
+Variável ou parâmetro está fora do seu intervalo válido. </p>
+<p>ReferenceError Cria uma instância que representa um erro que ocorre quando de-
 
-referencing an invalid reference.
-SyntaxError
-    Creates an instance representing a syntax error that occurs while 
+Referenciando uma referência inválida.</p>
+<p>SyntaxError Cria uma instância que representa um erro de sintaxe que ocorre enquanto
 
-parsing code in eval().
-TypeError
-    Creates an instance representing an error that occurs when a variable 
+Analisar código em eval ().</p>
+<p>TypeError Cria uma instância que representa um erro que ocorre quando uma variável
 
-or parameter is not of a valid type.
-URIError
-    Creates an instance representing an error that occurs when encodeURI
+Ou parâmetro não é de um tipo válido.</p>
+<p>URIError Cria uma instância que representa um erro que ocorre quando encodeURI
 
-() or decodeURI() are passed invalid parameters.</p>
+() Ou decodeURI () passam parâmetros inválidos.</p>
 
 <h3>Captura e lançamento de exceções</h3>
 
