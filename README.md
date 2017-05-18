@@ -135,17 +135,181 @@ email tres
 
 <h2>Sintaxe OO</h2>
 
-<h3>Classes</h3>
+<h3>Criando classes e objetos</h3>
 
-<h3>Objetos</h3>
+<p>Criando Classe e objeto (function):</p>
 
-<h3>Atributos (visibilidade: privado e público, escopo: classe e objeto)</h3>
+~~~~
+function Pessoa(_nome){
+this.nome = _nome;
+}
+pessoa = new Pessoa("Pedro");
 
-<h3>Métodos (visibilidade: privado e público, escopo: classe e objeto)</h3>
+Literais:
+var carro = {
+marca: "Ford",
+modelo: "Ka",
+getDetalhes: function (){
+return this.marca + ' - ' + this.modelo;
+	}
+}
+
+carro.modelo = "Novo Ka";
+alert(carro.getDetalhes());
+~~~~
+
+<p>Classes e objetos em JS:</p>
+
+~~~~
+function Carro()
+{
+  var Marca = "Sem marca";
+  var Modelo = "Sem modelo";
+  this.SetMarca = SetMarca;
+  this.SetModelo = SetModelo;
+  this.ShowMarca = DisplayMarca;
+  this.ShowModelo = DisplayModelo; 
+   
+  function DisplayMarca(){
+    alert(Marca);
+  }
+   
+  function DisplayModelo(){
+    alert(Modelo);
+  }
+   
+  function SetMarca(_marca) {
+    Marca = _marca;
+  }
+   
+  function SetModelo(_modelo) {
+      Modelo = _modelo;
+  }
+   
+  }
+  var carro = new Carro();
+  carro.SetMarca("Ford");
+  carro.SetModelo("Ka");
+  carro.ShowMarca(); 
+  carro.ShowModelo();
+~~~~
+
+<h3>Métodos</h3>
+
+~~~~
+carro = {
+        Marca : "Ford",
+        Modelo : "Ka",
+        Caracteristicas : ["Preto", 1.0, "2 portas"],
+         
+        exibirDetalhes : function(){
+          alert("Marca: " + this.Marca + " - Modelo: " + this.Modelo)
+        }  
+    }
+     
+    carro.exibirDetalhes();
+    alert(carro.Caracteristicas[0])
+      
+    var Pessoa = { nome : "Maria", idade : 30, sexo: "F" } 
+     
+    var mapa = { 
+        cantoSuperiorEsquerdo : { x : 1, y : 1 },
+        cantoSuperiorDireito : { x : 10, y : 1 },
+        cantoInferiorEsquerdo : { x : 1, y : 10 },
+        cantoInferiorDireito : { x : 10, y : 10 }
+    }
+     
+    alert(mapa.cantoInferiorDireito.x); 
+ ~~~~
 
 <h3>Construtores</h3>
 
+~~~~
+class Produto {
+  constructor(paramNome, paramPreco){
+    this.nome = paramNome;
+    this.preco = paramPreco;
+  }
+  calculaDesconto() {
+     return this.preco * 0.1;
+  }
+}
+var produto1 = new Produto("Blusa", 120);
+var produto2 = new Produto("Calça", 300);
+produto1.calculaDesconto(); //12
+produto2.calculaDesconto(); //30
+~~~~
+
 <h3>Herança</h3>
+
+<p>1 – Prototype-chaining Inheritance
+
+Antes de pensarmos na herança, vamos escrever uma função construtora 
+
+utilizando o Pseudo-classical pattern para representar a Pessoa :
+var Pessoa = function(nome, email){
+    this.nome = nome;
+    this.email = email
+};
+ 
+Pessoa.prototype.fala = function(){
+    console.log("Olá, meu nome é "+this.nome+" e meu email é 
+
+"+this.email);
+};
+
+Mas note que, deste modo, nada impede que um desenvolvedor instancie uma 
+
+pessoa com um email inválido:
+var leoInvalido = new Pessoa("Leonardo", "emailinvalido");
+
+Por estarmos utilizando uma função construtora, fica fácil resolver esse 
+
+problema:
+var Pessoa = function(nome, email){
+    this.nome = nome;
+    
+    if(emailEhValido(email))
+       this.email = email
+};
+
+Bacana, já temos a nossa Pseudo-classe representando uma Pessoa.
+Mas, como disse anteriormente, nós precisamos de um outro tipo de pessoa: 
+
+uma PessoaFisica, que possui CPF e sabe dizê-lo:
+var PessoaFisica = function(nome, email, cpf){
+    this.nome = nome;
+    this.email = email;
+    this.cpf = cpf;
+};
+ 
+PessoaFisica.prototype.dizCpf = function(){
+    console.log(this.cpf);
+};
+
+Mas note que, do jeito que implementamos a função construtora 
+
+PessoaFisica, ela não está verificando se o email foi preenchido 
+
+corretamente como estávamos fazendo na Pessoa!
+
+Vamos então reaproveitar a verificação que escrevemos anteriormente. Para 
+
+isso, basta chamar a função Pessoa utilizando a nossa instância (this) 
+
+como referência.
+
+Essa técnica é chamada de Constructor Stealing :
+var PessoaFisica = function(nome, email, cpf){
+    Pessoa.call(this, nome, email);
+    this.cpf = cpf;
+};
+ 
+PessoaFisica.prototype.dizCpf = function(){
+    console.log(this.cpf);
+};
+
+Isso fará com que nossa PessoaFisica tenha todos os atributos que uma pessoa.</p>
 
 <h3>Polimorfismo</h3>
 
@@ -153,6 +317,67 @@ email tres
 
 <h3>Categorias de exeções</h3>
 
+<p>
+EvalError
+    Creates an instance representing an error that occurs regarding the 
+
+global function eval().
+InternalError
+    Creates an instance representing an error that occurs when an 
+
+internal error in the JavaScript engine is thrown. E.g. "too much 
+
+recursion".
+RangeError
+    Creates an instance representing an error that occurs when a numeric 
+
+variable or parameter is outside of its valid range.
+ReferenceError
+    Creates an instance representing an error that occurs when de-
+
+referencing an invalid reference.
+SyntaxError
+    Creates an instance representing a syntax error that occurs while 
+
+parsing code in eval().
+TypeError
+    Creates an instance representing an error that occurs when a variable 
+
+or parameter is not of a valid type.
+URIError
+    Creates an instance representing an error that occurs when encodeURI
+
+() or decodeURI() are passed invalid parameters.</p>
+
 <h3>Captura e lançamento de exceções</h3>
 
+~~~~
+try {
+	document.write('teste');
+}
+
+catch(erro) {
+	alert("erro no js: " + erro);
+}
+~~~~
+
 <h3>Criar novas exeções</h3>
+
+~~~~
+try {
+	if (codigo < 10) {
+		throw "erro_1";
+	} else {
+		if (codigo > 100) {
+			throw "erro_2";
+		}
+	}
+} catch (erro) {
+	if (erro == "erro_1") {
+		alert('Codigo é menor que 10');
+	} 
+	if (erro == "erro_1") {
+		alert('Codigo é maior que 100');
+	}
+}
+~~~~
