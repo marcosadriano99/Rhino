@@ -315,26 +315,27 @@ Isso fará com que nossa PessoaFisica tenha todos os atributos que uma pessoa.</
 <h3>Categorias de exeções</h3>
 
 <p>
-EvalError Cria uma instância que representa um erro que ocorre em relação ao
+<b>EvalError</b> Cria uma instância que representa um erro que ocorre em relação ao
 
 Função global eval (). </p>
-<p>InternalError Cria uma instância que representa um erro que ocorre quando um
+<p><b>InternalError</b> Cria uma instância que representa um erro que ocorre quando um
 
 Erro interno no mecanismo JavaScript é lançado. Por exemplo. "demais
 
-Recursão "RangeError Cria uma instância que representa um erro que ocorre quando um valor numérico
+Recursão "</p>
+<p><b>RangeError</b> Cria uma instância que representa um erro que ocorre quando um valor numérico
 
 Variável ou parâmetro está fora do seu intervalo válido. </p>
-<p>ReferenceError Cria uma instância que representa um erro que ocorre quando de-
+<p><b>ReferenceError</b> Cria uma instância que representa um erro que ocorre quando de-
 
 Referenciando uma referência inválida.</p>
-<p>SyntaxError Cria uma instância que representa um erro de sintaxe que ocorre enquanto
+<p><b>SyntaxError</b> Cria uma instância que representa um erro de sintaxe que ocorre enquanto
 
 Analisar código em eval ().</p>
-<p>TypeError Cria uma instância que representa um erro que ocorre quando uma variável
+<p><b>TypeError</b> Cria uma instância que representa um erro que ocorre quando uma variável
 
 Ou parâmetro não é de um tipo válido.</p>
-<p>URIError Cria uma instância que representa um erro que ocorre quando encodeURI
+<p><b>URIError</b> Cria uma instância que representa um erro que ocorre quando encodeURI
 
 () Ou decodeURI () passam parâmetros inválidos.</p>
 
