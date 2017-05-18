@@ -12,8 +12,9 @@ Paulo Victor Freire Ribeiro Damasceno - <b>GitHub nickname:</b> pvictorfreitas -
 
 <h2>Instalação e uso</h2>
 
-<p>Para fazer o download do <b>Rhino</b>, o seu mantenedor, a <i>Mozzila Foundation</i>, disponibiliza um site onde é possível encontrar várias versões da linguagem que podem ser baixadas para o computador. Após terminar o download e descompactar o arquivo, é necessário setar as variáveis de ambiente, abrindo as propriedades do computador, procurando pelas configurações avançadas do sistema e clicando em "Variáveis de Ambiente..." Então, nas opções "Variáveis do Sistema", procure pela variável chamada "CLASSPATH" (caso não exista, crie) e adicione o local onde foi descompactado o arquivo baixado. Confirmando a operação, estão concluídas as variáveis de ambiente para o <b>Rhino</b>.</p>
-<p>Para criar um arquivo <i>bat</i> para abrir o <b>Rhino</b>, é preciso abrir o prompt de comando e ir para o diretório do arquivo baixado. Então, crie um arquivo em lotes digitando "copy con Rhino.bat" Depois disso, digite o seguinte código:</p>
+<p>Para fazer o download do <b>Rhino</b>, o seu mantenedor, a <i>Mozzila Foundation</i>, disponibiliza um site onde é possível encontrar várias versões da linguagem que podem ser baixadas para o computador. Após terminar o download, é necessário descompactar o arquivo.</p>
+
+<p> Para iniciar, digite o seguinte código:</p>
 
 ~~~~
 @echo off
@@ -110,10 +111,25 @@ do{print(x); x++;} while(x <= 5);
 <h5>For</h5>
 
 ~~~~
-
+for(var x = 5; x >= 0; x--) print(x);
+5
+4
+3
+2
+1
+0
 ~~~~
 
-<h3>Vetores, matrizes e strings</h3>
+<h3>Vetores e strings</h3>
+
+~~~~
+var x = ["email um", "email dois", "email tres"];
+
+for (var y = 0; y < x.length; y++) print(x[y]);
+email um
+email dois
+email tres
+~~~~
 
 <h3>Funções</h3>
 
