@@ -24,7 +24,6 @@ java -jar js.jar
 ^Z
 ~~~~
 
-<p>Agora você criou um arquivo em lotes e pode iniciar o <b>Rhino</b>.
 
 <h2>Sintaxe básica</h2>
 
